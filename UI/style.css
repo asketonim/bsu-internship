@@ -1,6 +1,9 @@
 * {
   margin: 0;
   padding: 0;
+}
+
+body {
   font-family: 'Calibri', sans-serif;
 }
 
@@ -11,13 +14,8 @@ button {
 }
 
 textarea {
-  border: none;
-  display: block;
-  
-}
-
-textarea:focus {
-  outline: none;
+  border: 1px solid rgba(57, 62, 70, 0.2);
+  border-radius: 5px;
 }
 
 a {
@@ -29,7 +27,11 @@ a:hover {
   color: #ffaaa5;
 }
 
-header {
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   width: 100%;
@@ -37,16 +39,16 @@ header {
   background-color: #8AC6D1;
 }
 
-#logo {
+.logo {
   position: relative;
   display: inline-block;
   color: #FFFDF9;
   font-size: 40px;
-  margin: 8px 3% 0 3%;
+  margin: auto 3%;
 }
 
-#tabs {
-  display: inline;
+.tabs {
+  margin: auto 3%;
 }
 
 .tab {
@@ -54,11 +56,6 @@ header {
   font-size: 24px;
   display: inline;
   margin: 8px;
-}
-
-.tab:hover {
-  color: #FFFDF9;
-  cursor: pointer;
 }
 
 
@@ -95,21 +92,27 @@ footer {
   overflow: hidden;
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
   .content {
     width: 50%;
   }
 }
 
-@media (max-width: 900px) {
+@media screen and (max-width: 900px) {
   .content {
     width: 60%;
   }
 }
 
-@media (max-width: 600px) {
+@media screen and (max-width: 600px) {
   .content {
     width: 90%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content {
+    width: 95%;
   }
 }
 
@@ -129,23 +132,41 @@ footer {
 
 .like-button {
   float: left;
-  color: rgba(57, 62, 70, 0.7);
   font-size: 14px;
 }
 
-.edit-buttons {
-  float: right;
+.post-content {
+  margin-bottom: 8px;
 }
 
-.edit-buttons button {
+.buttons-holder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.auth-button {
   margin: 0 4px;
 }
 
+.heart-icon {
+  height: 10px;
+  width: 10px;
+}
+
+.date {
+  margin-left: 8px;
+}
+
+
+.search-field {
+  display: flex;
+  justify-content: space-between;
+}
 
 .search {
   height: 24px;
   border-radius: 5px;
-  width: 90%;
+  width: 85%;
   border: 1px solid #8AC6D1;
 }
 
@@ -153,31 +174,45 @@ footer {
   outline: none;
 }
 
-.search::placeholder {
-  margin-left: 4px;
-}
-
 
 .add-post {
-  padding: 4px;
+  padding: 8px;
   width: 100%;
   border: 1px solid #8AC6D1;
   margin-top: 8px;
   border-radius: 5px;
 }
 
-.add-post button {
-
-  background-color: #8AC6D1;
-  border: 1px solid #8AC6D1;
-  border-radius: 5px;
-  width: 48px;
-  color: #FFFDF9;
-  margin-left: 90%;
+.post-button-holder {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .add-post textarea {
-  width: 100%;
-  margin: 4px 0;
+  width: 98%;
+  margin: 2px 0;
   resize: none;
+}
+
+
+.btn {
+  background-color: #8AC6D1;
+  border: 1px solid #8AC6D1;
+  border-radius: 5px;
+  height: 24px;
+  width: 60px;
+  color: #ffd3b6;
+  font-size: 12px;
+}
+
+.m-opacity {
+  color: rgba(57, 62, 70, 0.5);
+}
+
+.s-opacity {
+  color: rgba(57, 62, 70, 0.7);
+}
+
+.xs-opacity {
+  color: rgba(57, 62, 70, 0.9);
 }
