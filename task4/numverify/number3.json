@@ -1,1 +1,12 @@
-{"valid":true,"number":"375296133001","local_format":"296133001","international_format":"+375296133001","country_prefix":"+375","country_code":"BY","country_name":"Belarus (Republic of)","location":"","carrier":"UE VELCOM","line_type":"mobile"}
+{
+  "valid": true,
+  "number": "375296133001",
+  "local_format": "296133001",
+  "international_format": "+375296133001",
+  "country_prefix": "+375",
+  "country_code": "BY",
+  "country_name": "Belarus (Republic of)",
+  "location": "",
+  "carrier": "UE VELCOM",
+  "line_type": "mobile"
+}
