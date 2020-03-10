@@ -211,6 +211,7 @@ footer {
 
 .btn:hover {
   color: #FFFDF9;
+  background-color: #ffd3b6;
 }
 
 .m-opacity {
@@ -223,4 +224,8 @@ footer {
 
 .xs-opacity {
   color: rgba(57, 62, 70, 0.9);
+}
+
+.smooth {
+  transition: 300ms all;
 }
