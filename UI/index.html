@@ -6,97 +6,99 @@
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-
+<section class="content-holder">
   <header class="header">
-      <h1 class="logo"> <a href="">tilter</a></h1>
-      <ul class="tabs">
-        <li class="tab"><a href="">Home</a></li>
-        <li class="tab"><a href="">@username</a></li>
-        <li class="tab"><a href="">Log in</a></li>
-      </ul>
-  </header>
+    <h1 class="logo"> <a href="">tilter</a></h1>
+    <nav class="tabs">
+      <a class="tab" href="">Home</a>
+      <a class="tab" href="">@username</a>
+      <a class="tab" href="">Log in</a>
+    </nav>
+</header>
 
-  <main class="content">
+<main class="content">
 
-    <div class="search-field">
-      <input class="search" type="text" placeholder="Search" />
-      <button class="btn">
-        Filter
-      </button>
-    </div>
-
-
-  <div class="add-post">
-    <form>
-      <textarea placeholder="Tweet" name="tweet" id="tweet-area"></textarea>
-      <textarea placeholder="#tags" name="tags" id="tags-area"></textarea>
-      <div class="post-button-holder">
-        <button class="btn">Post</button>
-      </div>
-    </form>
+  <div class="search-field">
+    <input class="search" type="text" placeholder="Search" />
+    <button class="btn">
+      Filter
+    </button>
   </div>
 
 
-    <article class="post">
-      <div class="img-holder">
-        <img class="profile-photo" src="./assets/profile-photo.svg" alt="profile-photo" />
-      </div>
-      <div>
-        <div class="post-info">
-          <span>Name</span>
-          <span class="m-opacity">@nickname</span>
-          <span class="date m-opacity">Feb 12</span>
-        </div>
-          <p class="post-content xs-opacity">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-          standard dummy text ever since the 1500s, when an 
-          unknown printer took a galley of type and scrambled...
-          </p>
-          <div class="buttons-holder">
-            <div class="like-button m-opacity">
-              <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
-              <span class="s-opacity">12</span>
-            </div>
-            <div class="auth-buttons">
-              <button class="auth-button btn">Edit</button>
-              <button class="auth-button btn">Delete</button>
-            </div>
-          </div>
-      </div>
-    </article>
-
-    <article class="post">
-      <div class="img-holder">
-        <img class="profile-photo" src="./assets/profile-photo.svg" alt="profile-photo" />
-      </div>
-      <div>
-        <div class="post-info">
-          <span>Name</span>
-          <span class="m-opacity">@nickname</span>
-          <span class="date m-opacity">Feb 12</span>
-        </div>
-          <p class="post-content xs-opacity">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-          standard dummy text ever since the 1500s, when an 
-          unknown printer took a galley of type and scrambled...
-          </p>
-          <div class="buttons-holder">
-            <div class="like-button m-opacity">
-              <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
-              <span class="s-opacity">12</span>
-            </div>
-          </div>
-      </div>
-    </article>
-
-  </main>
-
-  <footer>
-    <div>
-      <p>Anton Dubik, 2nd year, 7 group</p>
-      <p>2020 © Tilter</p>
-      <p><a href="mailto:anton.dubik33@gmail.com">anton.dubik33@gmail.com</a></p>
+<div class="add-post">
+  <form>
+    <textarea placeholder="Tweet" name="tweet" id="tweet-area"></textarea>
+    <textarea placeholder="#tags" name="tags" id="tags-area"></textarea>
+    <div class="post-button-holder">
+      <button class="btn">Post</button>
     </div>
-  </footer>
+  </form>
+</div>
+
+
+  <article class="post">
+    <div class="img-holder">
+      <img class="profile-photo" src="./assets/profile-photo.svg" alt="Profile photo" />
+    </div>
+    <div>
+      <div class="post-info">
+        <span>Name</span>
+        <span class="m-opacity">@nickname</span>
+        <span class="date m-opacity">Feb 12</span>
+      </div>
+        <p class="post-content xs-opacity">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+        standard dummy text ever since the 1500s, when an 
+        unknown printer took a galley of type and scrambled...
+        </p>
+        <div class="buttons-holder">
+          <div class="like-button m-opacity">
+            <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
+            <span class="s-opacity">12</span>
+          </div>
+          <div class="auth-buttons">
+            <button class="auth-button btn">Edit</button>
+            <button class="auth-button btn">Delete</button>
+          </div>
+        </div>
+    </div>
+  </article>
+
+  <article class="post">
+    <div class="img-holder">
+      <img class="profile-photo" src="./assets/profile-photo.svg" alt="profile-photo" />
+    </div>
+    <div>
+      <div class="post-info">
+        <span>Name</span>
+        <span class="m-opacity">@nickname</span>
+        <span class="date m-opacity">Feb 12</span>
+      </div>
+        <p class="post-content xs-opacity">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+        standard dummy text ever since the 1500s, when an 
+        unknown printer took a galley of type and scrambled...
+        </p>
+        <div class="buttons-holder">
+          <div class="like-button m-opacity">
+            <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
+            <span class="s-opacity">12</span>
+          </div>
+        </div>
+    </div>
+  </article>
+
+</main>
+
+<footer>
+  <div>
+    <p>Anton Dubik, 2nd year, 7 group</p>
+    <p>2020 © Tilter</p>
+    <p><a href="mailto:anton.dubik33@gmail.com">anton.dubik33@gmail.com</a></p>
+  </div>
+</footer>
+</section>
+ 
 </body>
 </html>
