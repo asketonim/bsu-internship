@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> tilter </title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<section class="content-holder">
+  <header class="header">
+    <h1 class="logo"> <a class="smooth" href="">tilter</a></h1>
+    <nav class="tabs">
+      <a class="tab smooth" href="">Home</a>
+      <a class="tab smooth" href="">@username</a>
+      <a class="tab smooth" href="">Log in</a>
+    </nav>
+  </header>
+
+  <main class="content">
+
+    <div class="search-form">
+      <form class="search-field">
+        <input class="search" type="search" placeholder="Search" />
+        <button class="btn smooth">Filter</button>
+      </form>
+    </div>
+
+
+    <div class="filter column">
+      <form class="name-tag-form row">
+        <div class="checkbox-holder column">
+          <label class="label-filter"><input type="checkbox" id="name-check"> Name: </label>
+          <label class="label-filter"><input type="checkbox" id="tags-check"> Tags: </label>
+          <label class="label-filter"><input type="checkbox" id="date-check"> Date: </label>
+        </div>
+        <div class="input-filter-holder column">
+          <input class="input-filter" type="text" placeholder="Enter names"/>
+          <input class="input-filter" type="text" placeholder="Enter tags"/>
+          <div class="date-filter-btn-holder row">
+            <div class="select-date">
+              <button>
+                <img class="arrow" src="./assets/left-arrow.svg" alt="Left arrow" />
+              </button>
+              <input class="day-filter" size="2" maxlength="2" type="text" placeholder="23" />
+              <button>
+                <img class="arrow" src="./assets/right-arrow.svg" alt="Right arrow">
+              </button>
+            </div>
+            <div class="select-date">
+              <button>
+                <img class="arrow" src="./assets/left-arrow.svg" alt="Left arrow" />
+              </button>
+              <input class="day-filter" size="2" maxlength="2" type="text" placeholder="07" />
+              <button>
+                <img class="arrow" src="./assets/right-arrow.svg" alt="Right arrow">
+              </button>
+            </div>
+            <div class="select-date">
+              <button>
+                <img class="arrow" src="./assets/left-arrow.svg" alt="Left arrow" />
+              </button>
+              <input class="day-filter" size="2" maxlength="4" type="text" placeholder="2012" />
+              <button>
+                <img class="arrow" src="./assets/right-arrow.svg" alt="Right arrow">
+              </button>
+            </div>     
+          </div>
+        </div>   
+      </form>
+      <div class="filter-button">
+        <button class="btn smooth">Search</button>
+      </div>
+    </div>
+
+
+    <div class="add-post">
+      <form>
+        <textarea placeholder="Tweet" name="tweet" id="tweet-area"></textarea>
+        <textarea placeholder="#tags" name="tags" id="tags-area"></textarea>
+        <div class="post-button-holder">
+          <button class="btn smooth">Post</button>
+        </div>
+      </form>
+    </div>
+
+
+    <section class="posts">
+      <article class="post">
+        <div class="img-holder">
+          <img class="profile-photo" src="./assets/profile-photo.svg" alt="Profile photo" />
+        </div>
+        <div>
+          <div class="post-info">
+            <span>Name</span>
+            <span class="m-opacity">@nickname</span>
+            <span class="date m-opacity">Feb 12</span>
+          </div>
+            <p class="post-content xs-opacity">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+            standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled...
+            </p>
+            <div class="buttons-holder">
+              <div class="like-button m-opacity">
+                <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
+                <span class="s-opacity">12</span>
+              </div>
+              <div class="auth-buttons">
+                <button class="auth-button btn smooth">Edit</button>
+                <button class="auth-button btn smooth">Delete</button>
+              </div>
+            </div>
+        </div>
+      </article>
+  
+      <article class="post">
+        <div class="img-holder">
+          <img class="profile-photo" src="./assets/profile-photo.svg" alt="profile-photo" />
+        </div>
+        <div>
+          <div class="post-info">
+            <span>Name</span>
+            <span class="m-opacity">@nickname</span>
+            <span class="date m-opacity">Feb 12</span>
+          </div>
+            <p class="post-content xs-opacity">
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+            standard dummy text ever since the 1500s, when an 
+            unknown printer took a galley of type and scrambled...
+            </p>
+            <div class="buttons-holder">
+              <div class="like-button m-opacity">
+                <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
+                <span class="s-opacity">12</span>
+              </div>
+            </div>
+        </div>
+      </article>
+    </section>
+    
+
+  </main>
+
+  <footer>
+    <div>
+      <p>Anton Dubik, 2nd year, 7 group</p>
+      <p>2020 © Tilter</p>
+      <p><a class="smooth" href="mailto:anton.dubik33@gmail.com">anton.dubik33@gmail.com</a class="smooth"></p>
+    </div>
+  </footer>
+</section>
+ 
+</body>
+</html>
