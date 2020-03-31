@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "127a3298-6da4-4a5b-8545-75bd59a3f3c3",
+		"name": "numbers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://apilayer.net/api/validate?access_key=0d96ca5d87101c959346a03963c70695&number=447577111&country_code=BY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://apilayer.net/api/validate?access_key=0d96ca5d87101c959346a03963c70695&number=447577111&country_code=BY",
+					"protocol": "http",
+					"host": [
+						"apilayer",
+						"net"
+					],
+					"path": [
+						"api",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "0d96ca5d87101c959346a03963c70695"
+						},
+						{
+							"key": "number",
+							"value": "447577111"
+						},
+						{
+							"key": "country_code",
+							"value": "BY"
+						}
+					]
+				},
+				"description": "Request to validate my phone number"
+			},
+			"response": []
+		},
+		{
+			"name": "http://apilayer.net/api/validate?access_key=0d96ca5d87101c959346a03963c70695&number=447577111&country_code=BY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://apilayer.net/api/validate?access_key=0d96ca5d87101c959346a03963c70695&number=75577111&country_code=RU",
+					"protocol": "http",
+					"host": [
+						"apilayer",
+						"net"
+					],
+					"path": [
+						"api",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "0d96ca5d87101c959346a03963c70695"
+						},
+						{
+							"key": "number",
+							"value": "75577111"
+						},
+						{
+							"key": "country_code",
+							"value": "RU"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://apilayer.net/api/validate?access_key=0d96ca5d87101c959346a03963c70695&number=447577111&country_code=BY",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://apilayer.net/api/validate?access_key=0d96ca5d87101c959346a03963c70695&number=296133001&country_code=BY",
+					"protocol": "http",
+					"host": [
+						"apilayer",
+						"net"
+					],
+					"path": [
+						"api",
+						"validate"
+					],
+					"query": [
+						{
+							"key": "access_key",
+							"value": "0d96ca5d87101c959346a03963c70695"
+						},
+						{
+							"key": "number",
+							"value": "296133001"
+						},
+						{
+							"key": "country_code",
+							"value": "BY"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

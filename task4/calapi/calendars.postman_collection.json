@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "bea95978-d0cd-4151-986a-1c4b8139fe00",
+		"name": "calendars",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://calapi.inadiutorium.cz/api/v0/en/calendars/czech/20001/11/10",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://calapi.inadiutorium.cz/api/v0/en/calendars/czech/20001/11/10",
+					"protocol": "http",
+					"host": [
+						"calapi",
+						"inadiutorium",
+						"cz"
+					],
+					"path": [
+						"api",
+						"v0",
+						"en",
+						"calendars",
+						"czech",
+						"20001",
+						"11",
+						"10"
+					],
+					"query": [
+						{
+							"key": "ddd",
+							"value": "dd",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://calapi.inadiutorium.cz/api/v0/fr/calendars/general-fr",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://calapi.inadiutorium.cz/api/v0/fr/calendars/general-fr",
+					"protocol": "http",
+					"host": [
+						"calapi",
+						"inadiutorium",
+						"cz"
+					],
+					"path": [
+						"api",
+						"v0",
+						"fr",
+						"calendars",
+						"general-fr"
+					],
+					"query": [
+						{
+							"key": "ddd",
+							"value": "dd",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://calapi.inadiutorium.cz/api/v0/en/calendars/default/today",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://calapi.inadiutorium.cz/api/v0/en/calendars/default/today",
+					"protocol": "http",
+					"host": [
+						"calapi",
+						"inadiutorium",
+						"cz"
+					],
+					"path": [
+						"api",
+						"v0",
+						"en",
+						"calendars",
+						"default",
+						"today"
+					],
+					"query": [
+						{
+							"key": "ddd",
+							"value": "dd",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

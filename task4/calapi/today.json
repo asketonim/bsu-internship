@@ -1,0 +1,17 @@
+{
+  "date": "2020-03-09",
+  "season": "lent",
+  "season_week": 2,
+  "celebrations": [{
+    "title": "Monday, 2nd week of Lent",
+    "colour": "violet",
+    "rank": "ferial",
+    "rank_num": 2.9
+  }, {
+    "title": "Saint Frances of Rome, religious",
+    "colour": "violet",
+    "rank": "commemoration",
+    "rank_num": 4.0
+  }],
+  "weekday": "monday"
+}
