@@ -1,5 +1,9 @@
 # Dependencies
 /node_modules
+task5-servlets/.idea
+task5-servlets/lib
+task5-servlets/out
+task5-servlets/task5-servlets.iml
 
 
 # Created by https://www.gitignore.io/api/intellij
