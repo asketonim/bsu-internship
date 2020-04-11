@@ -1,4 +1,4 @@
-let posts = [
+let postsRaw = [
   {
     id: 1,
     author: {
@@ -16,7 +16,7 @@ let posts = [
     author: {
       id: 2,
       name: 'Andrey Alekseev',
-      username: 'asketonim'
+      username: 'asket'
     },
     description: 'Contrary to popular belief, Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text.',
     createdAt: new Date('2020-03-17T23:00:00'),
@@ -52,7 +52,7 @@ let posts = [
     author: {
       id: 1,
       name: 'Anton Dubik',
-      username: 'asketonim'
+      username: 'asket'
     },
     description: 'Contrary to popular belief, Lorem Ipsum is not simply random text.',
     createdAt: new Date('2020-03-17T23:00:00'),
@@ -76,7 +76,7 @@ let posts = [
     author: {
       id: 1,
       name: 'Anton Dubik',
-      username: 'asketonim'
+      username: 'asket'
     },
     description: 'Contrary to popular belief, Lorem Ipsum is not simply random text.',
     createdAt: new Date('2020-03-17T23:00:00'),
