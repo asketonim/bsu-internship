@@ -3,7 +3,7 @@
 class PostModel {
   constructor(posts) {
     this._posts = [];
-    this.addAll(posts);
+    this._addAll(posts);
   }
 
   getPage(skip = 0, top = 10, filterConfig) {
