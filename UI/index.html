@@ -4,14 +4,9 @@
   <meta charset="UTF-8">
   <title> tilter </title>
   <link rel="stylesheet" href="./style.css">
-  <script src="./js/data.js"></script>
-  <script src="./js/PostModel.js"></script>
-  <script src="./js/test.js"></script>
 </head>
 <body>
-  <script>
-    runTests();
-  </script>
+
 <section class="content-holder">
   <header class="header">
     <h1 class="logo"> <a class="smooth" href="">tilter</a></h1>
@@ -21,17 +16,17 @@
       <a class="tab smooth" href="">Log in</a>
     </nav>
   </header>
-
+  
   <main class="content">
-
+    
     <div class="search-form">
       <form class="search-field">
         <input class="search" type="search" placeholder="Search" />
         <button class="btn smooth">Filter</button>
       </form>
     </div>
-
-
+    
+    
     <div class="filter column">
       <form class="name-tag-form row">
         <div class="checkbox-holder column">
@@ -77,8 +72,8 @@
         <button class="btn smooth">Search</button>
       </div>
     </div>
-
-
+    
+    
     <div class="add-post">
       <form>
         <textarea placeholder="Tweet" name="tweet" id="tweet-area"></textarea>
@@ -88,8 +83,8 @@
         </div>
       </form>
     </div>
-
-
+    
+    
     <section class="posts">
       <article class="post">
         <div class="img-holder">
@@ -101,24 +96,24 @@
             <span class="m-opacity">@nickname</span>
             <span class="date m-opacity">Feb 12</span>
           </div>
-            <p class="post-content xs-opacity">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+          <p class="post-content xs-opacity">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
             standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled...
-            </p>
-            <div class="buttons-holder">
-              <div class="like-button m-opacity">
-                <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
-                <span class="s-opacity">12</span>
-              </div>
-              <div class="auth-buttons">
-                <button class="auth-button btn smooth">Edit</button>
-                <button class="auth-button btn smooth">Delete</button>
-              </div>
+          </p>
+          <div class="buttons-holder">
+            <div class="like-button m-opacity">
+              <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
+              <span class="s-opacity">12</span>
             </div>
+            <div class="auth-buttons">
+              <button class="auth-button btn smooth">Edit</button>
+              <button class="auth-button btn smooth">Delete</button>
+            </div>
+          </div>
         </div>
       </article>
-  
+      
       <article class="post">
         <div class="img-holder">
           <img class="profile-photo" src="./assets/profile-photo.svg" alt="profile-photo" />
@@ -129,32 +124,36 @@
             <span class="m-opacity">@nickname</span>
             <span class="date m-opacity">Feb 12</span>
           </div>
-            <p class="post-content xs-opacity">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
+          <p class="post-content xs-opacity">
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
             standard dummy text ever since the 1500s, when an 
             unknown printer took a galley of type and scrambled...
-            </p>
-            <div class="buttons-holder">
-              <div class="like-button m-opacity">
-                <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
-                <span class="s-opacity">12</span>
-              </div>
+          </p>
+          <div class="buttons-holder">
+            <div class="like-button m-opacity">
+              <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
+              <span class="s-opacity">12</span>
             </div>
+          </div>
         </div>
       </article>
     </section>
     
-
+    
   </main>
-
-  <footer>
-    <div>
-      <p>Anton Dubik, 2nd year, 7 group</p>
-      <p>2020 © Tilter</p>
-      <p><a class="smooth" href="mailto:anton.dubik33@gmail.com">anton.dubik33@gmail.com</a class="smooth"></p>
-    </div>
-  </footer>
+  
+    <footer>
+      <div>
+        <p>Anton Dubik, 2nd year, 7 group</p>
+        <p>2020 © Tilter</p>
+        <p><a class="smooth" href="mailto:anton.dubik33@gmail.com">anton.dubik33@gmail.com</a class="smooth"></p>
+      </div>
+    </footer>
 </section>
- 
+  
+  <script src="./js/data.js"></script>
+  <script src="./js/PostModel.js"></script>
+  <script src="./js/test.js"></script>
+  <script> runTests(); </script>
 </body>
 </html>
