@@ -13,6 +13,17 @@ class PostModel {
   //   hashtags: []
   // }
 
+  static _parseDate(stringDate) {
+    const reg = /\d{1,2}\/\d{1,2}\/\d{4}/;
+    if (stringDate.match(reg)) {
+      const parseDate = stringDate
+        .split('/')
+        .map((item) => parseInt(item, 10));
+      return new Date(parseDate[2], parseDate[1] - 1, parseDate[0]);
+    }
+    return false;
+  }
+
   getPage(skip = 0, top = 10, filterConfig) {
     let extractedPosts = [...this._posts];
 
@@ -26,29 +37,24 @@ class PostModel {
 
     if (filterConfig.createdAt) {
       // only date of this type - 'day/month/year' - is considered correct
-      const parseDate = filterConfig.createdAt.date
-        .split('/')
-        .map((item) => parseInt(item, 10));
-      const filterDate = new Date(parseDate[2], parseDate[1] - 1, parseDate[0]);
-      extractedPosts = extractedPosts
-        .filter((post) => {
-          if (filterConfig.createdAt.before) return post.createdAt < filterDate;
-          return post.createdAt > filterDate;
-        });
+      const filterDate = PostModel._parseDate(filterConfig.createdAt.date);
+      if (filterDate) {
+        extractedPosts = extractedPosts
+          .filter((post) => {
+            if (filterConfig.createdAt.before) return post.createdAt < filterDate;
+            return post.createdAt > filterDate;
+          });
+      }
     }
     if (filterConfig.hashtags) {
       extractedPosts = extractedPosts
         .filter((post) => post.hashtags
-          .filter((hashtag) => filterConfig.hashtags.includes(hashtag)).length);
+          .some((hashtag) => filterConfig.hashtags.includes(hashtag)));
     }
 
-    extractedPosts = extractedPosts.length ? extractedPosts.slice(skip, skip + top) : [];
+    extractedPosts = extractedPosts.slice(skip, skip + top);
 
-    return extractedPosts.sort((a, b) => {
-      if (a.createdAt > b.createdAt) return 1;
-      if (a.createdAt < b.createdAt) return -1;
-      return 0;
-    });
+    return extractedPosts.sort((a, b) => a - b);
   }
 
   get(id) {
@@ -82,7 +88,7 @@ class PostModel {
   }
 
   _addAll(posts) {
-    this._posts.concat(posts.filter((post) => PostModel.validate(post)));
+    this._posts = this._posts.concat(posts.filter((post) => PostModel.validate(post)));
   }
 
   edit(id, editInfo) {
