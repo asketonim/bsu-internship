@@ -64,7 +64,7 @@ class PostModel {
   static validate(post) {
     if (typeof post.id !== 'number'
         || typeof post.description !== 'string'
-        || typeof post.createdAt !== 'object'
+        || !(post.createdAt instanceof Date)
         || PostModel._validateAuthor(post.author)) return false;
 
     if (post.likes
@@ -84,7 +84,7 @@ class PostModel {
   }
 
   _addAll(posts) {
-    this._posts = posts.filter((post) => PostModel.validate(post));
+    this._posts.concat(posts.filter((post) => PostModel.validate(post)));
   }
 
   edit(id, editInfo) {
