@@ -62,7 +62,7 @@
         username: 'asket',
       },
       description: 'Contr Lorem Ipsum is not simply random text. Contrary to popular belief, Lorem Ipsum is not simply random text.',
-      createdAt: new Date('2020-03-17T23:00:00'),
+      createdAt: '23/23/23',
       likes: [],
     };
     print(test.add(post3));

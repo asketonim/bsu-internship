@@ -80,8 +80,10 @@ class PostModel {
   }
 
   add(post) {
-    if (PostModel.validate(post)) {
-      this._posts.push(post);
+    const newPost = { ...post, ...{ id: Math.round(Date.now() * Math.random()) } };
+    console.log(newPost);
+    if (PostModel.validate(newPost)) {
+      this._posts.push(newPost);
       return true;
     }
     return false;
