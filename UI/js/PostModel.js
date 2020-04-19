@@ -3,13 +3,22 @@
 class PostModel {
   constructor(posts) {
     this._posts = [];
-    this._addAll(posts);
+    this._addAll(posts || []);
   }
 
-  getPage(skip = 0, top = 10, filterConfig) {
-    let extractedPosts = this._posts.slice(skip, skip + top);
+  // filterConfig = {
+  //   author: 'something',
+  //   createdAt: {
+  //     date: 'day/month/year',
+  //     before: true // true - before, false - after
+  //   },
+  //   hashtags: []
+  // }
 
-    if (!filterConfig) return extractedPosts;
+  getPage(skip = 0, top = 10, filterConfig) {
+    let extractedPosts = [...this._posts];
+
+    if (!filterConfig) return extractedPosts.slice(skip, skip + top);
 
     if (filterConfig.author) {
       extractedPosts = extractedPosts
@@ -18,15 +27,30 @@ class PostModel {
     }
 
     if (filterConfig.createdAt) {
+      // only date of this type - 'day/month/year' - is considered correct
+      const parseDate = filterConfig.createdAt.date
+        .split('/')
+        .map((item) => parseInt(item, 10));
+      const filterDate = new Date(parseDate[2], parseDate[1] - 1, parseDate[0]);
       extractedPosts = extractedPosts
-        .filter((post) => post.createdAt === filterConfig.createdAt);
+        .filter((post) => {
+          if (filterConfig.createdAt.before) return post.createdAt < filterDate;
+          return post.createdAt > filterDate;
+        });
     }
-    if (filterConfig.hashtag) {
+    if (filterConfig.hashtags) {
       extractedPosts = extractedPosts
-        .filter((post) => post.hashtags.includes(filterConfig.hashtag));
+        .filter((post) => post.hashtags
+          .filter((hashtag) => filterConfig.hashtags.includes(hashtag)).length);
     }
 
-    return extractedPosts.sort((a, b) => a.createdAt < b.createdAt);
+    extractedPosts = extractedPosts.length ? extractedPosts.slice(skip, skip + top) : [];
+
+    return extractedPosts.sort((a, b) => {
+      if (a.createdAt > b.createdAt) return 1;
+      if (a.createdAt < b.createdAt) return -1;
+      return 0;
+    });
   }
 
   get(id) {
