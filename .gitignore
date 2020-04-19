@@ -1,5 +1,8 @@
 # Dependencies
 /node_modules
+
+/.vscode
+
 task5-servlets/.idea
 task5-servlets/lib
 task5-servlets/out
