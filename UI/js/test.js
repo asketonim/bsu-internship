@@ -1,5 +1,3 @@
-/* eslint-disable no-console */
-/* eslint-disable no-undef */
 (() => {
   const print = console.log;
 
@@ -15,8 +13,8 @@
     test.getPage(0, 10, { author: 'asketonim' }).forEach((post) => print(post));
     print('test.getPage(3, 3): ');
     test.getPage(3, 3).forEach((post) => print(post));
-    print('test.getPage({hashtags: [\'secondpost\']})')
-    test.getPage(0, 10, {hashtags: ['secondpost']}).forEach((post) => print(post));
+    print('test.getPage({hashtags: [\'secondpost\']})');
+    test.getPage(0, 10, { hashtags: ['secondpost'] }).forEach((post) => print(post));
     print('\n');
 
 

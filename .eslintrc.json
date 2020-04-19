@@ -11,6 +11,10 @@
     },
     "rules": {
         "semi": "error",
-        "quotes": ["error", "single"]
+        "quotes": ["error", "single"],
+        "no-unused-vars": "off",
+        "no-underscore-dangle": "off",
+        "no-undef": "off",
+        "no-console": "off"
     }
 }

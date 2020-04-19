@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-// eslint-disable-next-line no-unused-vars
 class PostModel {
   constructor(posts) {
     this._posts = [];
