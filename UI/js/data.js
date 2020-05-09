@@ -180,3 +180,8 @@ const posts = [
     hashtags: ['firstpost', 'twitter'],
   },
 ];
+
+const container = document.querySelector('.posts');
+posts.forEach((post) => {
+  container.appendChild(buildPost(post));
+});
