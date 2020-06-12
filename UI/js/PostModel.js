@@ -13,6 +13,47 @@ class PostModel {
   //   hashtags: []
   // }
 
+  static _buildPost(post) {
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const newPost = document.createElement('article');
+    newPost.classList.add('post');
+    newPost.innerHTML = `
+      <div class="img-holder">
+        <img class="profile-photo" src="./assets/profile-photo.svg" alt="Profile photo" />
+      </div>
+      <div>
+        <div class="post-info">
+          <span>${post.author.name}</span>
+          <span class="m-opacity">@${post.author.username}</span>
+          <span class="date m-opacity">
+            ${post.createdAt.getDay()} ${months[post.createdAt.getMonth()]} ${post.createdAt.getFullYear()}
+          </span>
+        </div>
+        <p class="post-content xs-opacity">
+          ${post.description}
+        </p>
+        <div class="buttons-holder">
+          <div class="like-button m-opacity">
+            <button><img class="heart-icon" src="./assets/heart.png" alt="heart-icon" /></button>
+            <span class="s-opacity">${post.likes.length}</span>
+          </div>
+          <div class="auth-buttons">
+            <button class="auth-button btn smooth">Edit</button>
+            <button class="auth-button btn smooth">Delete</button>
+          </div>
+        </div>
+      </div>
+    `;
+    return newPost;
+  }
+
+  static _updatePosts(posts) {
+    const container = document.querySelector('.posts');
+    posts.forEach((post) => {
+      container.appendChild(PostModel._buildPost(post));
+    });
+  }
+
   static _parseDate(stringDate) {
     const reg = /\d{1,2}\/\d{1,2}\/\d{4}/;
     if (stringDate.match(reg)) {
@@ -53,6 +94,7 @@ class PostModel {
     }
 
     extractedPosts = extractedPosts.slice(skip, skip + top);
+    PostModel._updatePosts(extractedPosts.sort((a, b) => a - b));
 
     return extractedPosts.sort((a, b) => a - b);
   }
@@ -81,9 +123,10 @@ class PostModel {
 
   add(post) {
     const newPost = { ...post, ...{ id: Math.round(Date.now() * Math.random()) } };
-    console.log(newPost);
+    newPost.createdAt = new Date();
     if (PostModel.validate(newPost)) {
       this._posts.push(newPost);
+      PostModel._updatePosts(this._posts);
       return true;
     }
     return false;
@@ -91,6 +134,7 @@ class PostModel {
 
   _addAll(posts) {
     this._posts = this._posts.concat(posts.filter((post) => PostModel.validate(post)));
+    PostModel._updatePosts(this._posts);
   }
 
   edit(id, editInfo) {
@@ -98,6 +142,7 @@ class PostModel {
     const editedPost = { ...this._posts[index], ...editInfo };
     if (PostModel.validate(editedPost)) {
       this._posts[index] = { ...editedPost };
+      PostModel._updatePosts(this._posts);
       return true;
     }
     return false;
@@ -105,9 +150,15 @@ class PostModel {
 
   remove(id) {
     this._posts = this._posts.filter((post) => post.id !== id);
+    PostModel._updatePosts(this._posts);
   }
 
   clear() {
     this._posts = [];
+    PostModel._updatePosts(this._posts);
   }
 }
+
+(() => {
+  window.displayedPosts = new PostModel(posts);
+})();

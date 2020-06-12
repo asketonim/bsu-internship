@@ -91,7 +91,7 @@ footer {
   display: flex;
   border: 1px solid #8AC6D1;
   border-radius: 5px;
-  min-height: 120px;
+  min-height: 60px;
   max-height: 240px;
   overflow: hidden;
 }

@@ -8,7 +8,7 @@ const posts = [
     },
     description: 'Contrary to popular belief, Lorem Ipsum is not simply random text.',
     createdAt: new Date('2020-03-17T23:00:00'),
-    likes: [],
+    likes: ['fsdafa', 'fdafadf', 'fa'],
     hashtags: ['firstpost', 'twitter'],
   },
   {
